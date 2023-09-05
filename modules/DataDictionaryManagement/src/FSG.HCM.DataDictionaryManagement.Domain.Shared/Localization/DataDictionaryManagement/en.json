@@ -1,0 +1,17 @@
+{
+  "culture": "en",
+  "texts": {
+    "ManageYourProfile":  "Manage your profile",
+    "SamplePageMessage": "A sample page for the DataDictionaryManagement module",
+    "Permission:DataDictionaryManagement": "DataDictionaryManagement",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    
+    "FSG.HCM.DataDictionaryManagement:100001": "DataDictionary Exist",
+    "FSG.HCM.DataDictionaryManagement:100002": "DataDictionary Not Exist",
+    "FSG.HCM.DataDictionaryManagement:100003": "DataDictionaryDetail Exist",
+    "FSG.HCM.DataDictionaryManagement:100004": "DataDictionaryDetail Not Exist"
+    
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "culture": "en",
+  "texts": {
+    "ManageYourProfile":  "Manage your profile",
+    "SamplePageMessage": "A sample page for the NotificationManagement module",
+    "FSG.HCM.NotificationManagement:100001": "Receiver Not Null",
+    "FSG.HCM.NotificationManagement:100002": "Message Not Exist",
+    "FSG.HCM.NotificationManagement:100003": "MessageType Unknown",
+    "FSG.HCM.NotificationManagement:100004": "User UnSubscription",
+    "FSG.HCM.NotificationManagement:100005": "Message Title NotNull",
+    "FSG.HCM.NotificationManagement:100006": "Message Content NotNull",
+    "FSG.HCM.NotificationManagement:100007": "Message Receiver NotNull"
+  }
+}

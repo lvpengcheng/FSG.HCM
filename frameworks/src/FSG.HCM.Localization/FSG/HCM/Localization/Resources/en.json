@@ -1,0 +1,15 @@
+{
+  "culture": "en",
+  "texts": {
+    "Welcome": "Welcome",
+    "Permission:Cap": "CAP Dashboard",
+    "FSG.HCM:100001": "The start page must be greater than or equal to 1",
+    "FSG.HCM:100002": "The maximum number of records per page cannot exceed 100,000",
+    "FSG.HCM:100003": "{0} can not be empty",
+    "FSG.HCM:PermissionDenied": "Permission Denied",
+    "FSG.HCM:ParameterValidationFailed": "Parameter Validation Failed",
+    "FSG.HCM:EntityNotFound": "Entity Not Found",
+    "FSG.HCM:Unimplemented ": "Unimplemented",
+    "FSG.HCM:DbUpdateConcurrency ": "The data has been modified, please resubmit"
+  }
+}

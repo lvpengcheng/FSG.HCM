@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>FSG.HCM.LanguageManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" />
+    <ProjectReference Include="..\FSG.HCM.LanguageManagement.Application.Contracts\FSG.HCM.LanguageManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\FSG.HCM.LanguageManagement.Domain\FSG.HCM.LanguageManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

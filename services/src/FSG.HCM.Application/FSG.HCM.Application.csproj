@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>FSG.HCM</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\modules\BasicManagement\src\FSG.HCM.BasicManagement.Application\FSG.HCM.BasicManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\modules\DataDictionaryManagement\src\FSG.HCM.DataDictionaryManagement.Application\FSG.HCM.DataDictionaryManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\modules\NotificationManagement\src\FSG.HCM.NotificationManagement.Application\FSG.HCM.NotificationManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\modules\LanguageManagement\src\FSG.HCM.LanguageManagement.Application\FSG.HCM.LanguageManagement.Application.csproj" />
+        <ProjectReference Include="..\FSG.HCM.Domain\FSG.HCM.Domain.csproj" />
+        <ProjectReference Include="..\FSG.HCM.Application.Contracts\FSG.HCM.Application.Contracts.csproj" />
+        <ProjectReference Include="..\FSG.HCM.FreeSqlRepository\FSG.HCM.FreeSqlRepository.csproj" />
+    </ItemGroup>
+
+</Project>

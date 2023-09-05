@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\shared\FSG.HCM.Shared.Hosting.Gateways\FSG.HCM.Shared.Hosting.Gateways.csproj" />
+    </ItemGroup>
+
+</Project>

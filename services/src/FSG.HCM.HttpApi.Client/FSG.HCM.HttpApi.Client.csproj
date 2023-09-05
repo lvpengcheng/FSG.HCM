@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+
+  <PropertyGroup>
+	<TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>FSG.HCM</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\modules\BasicManagement\src\FSG.HCM.BasicManagement.HttpApi.Client\FSG.HCM.BasicManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\modules\DataDictionaryManagement\src\FSG.HCM.DataDictionaryManagement.HttpApi.Client\FSG.HCM.DataDictionaryManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\modules\NotificationManagement\src\FSG.HCM.NotificationManagement.HttpApi.Client\FSG.HCM.NotificationManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\modules\LanguageManagement\src\FSG.HCM.LanguageManagement.HttpApi.Client\FSG.HCM.LanguageManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\FSG.HCM.Application.Contracts\FSG.HCM.Application.Contracts.csproj" />
+  </ItemGroup>
+
+ 
+
+</Project>

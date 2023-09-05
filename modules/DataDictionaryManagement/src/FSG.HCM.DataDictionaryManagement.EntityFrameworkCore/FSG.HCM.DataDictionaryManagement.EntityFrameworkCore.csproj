@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>FSG.HCM.DataDictionaryManagement</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore" />
+        <ProjectReference Include="..\FSG.HCM.DataDictionaryManagement.Domain\FSG.HCM.DataDictionaryManagement.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

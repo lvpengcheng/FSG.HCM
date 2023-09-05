@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+    <PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>FSG.HCM.FileManagement</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" />
+        <PackageReference Include="Volo.Abp.Authorization" />
+        <ProjectReference Include="..\FSG.HCM.FileManagement.Domain.Shared\FSG.HCM.FileManagement.Domain.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

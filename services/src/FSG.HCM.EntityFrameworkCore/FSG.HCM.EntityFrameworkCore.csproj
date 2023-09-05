@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>FSG.HCM</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\modules\BasicManagement\src\FSG.HCM.BasicManagement.EntityFrameworkCore\FSG.HCM.BasicManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\modules\DataDictionaryManagement\src\FSG.HCM.DataDictionaryManagement.EntityFrameworkCore\FSG.HCM.DataDictionaryManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\modules\NotificationManagement\src\FSG.HCM.NotificationManagement.EntityFrameworkCore\FSG.HCM.NotificationManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\modules\LanguageManagement\src\FSG.HCM.LanguageManagement.EntityFrameworkCore\FSG.HCM.LanguageManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\FSG.HCM.Domain\FSG.HCM.Domain.csproj" />
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+            <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

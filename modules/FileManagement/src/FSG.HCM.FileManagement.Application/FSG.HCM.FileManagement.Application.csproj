@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>FSG.HCM.FileManagement</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.AutoMapper" />
+        <PackageReference Include="Volo.Abp.Ddd.Application" />
+        <PackageReference Include="Volo.Abp.BlobStoring.Aliyun" />
+        <ProjectReference Include="..\FSG.HCM.FileManagement.Application.Contracts\FSG.HCM.FileManagement.Application.Contracts.csproj" />
+        <ProjectReference Include="..\FSG.HCM.FileManagement.Domain\FSG.HCM.FileManagement.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

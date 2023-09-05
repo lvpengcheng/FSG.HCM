@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>FSG.HCM</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\modules\BasicManagement\src\FSG.HCM.BasicManagement.HttpApi\FSG.HCM.BasicManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\modules\DataDictionaryManagement\src\FSG.HCM.DataDictionaryManagement.HttpApi\FSG.HCM.DataDictionaryManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\modules\NotificationManagement\src\FSG.HCM.NotificationManagement.HttpApi\FSG.HCM.NotificationManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\modules\LanguageManagement\src\FSG.HCM.LanguageManagement.HttpApi\FSG.HCM.LanguageManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\FSG.HCM.Application.Contracts\FSG.HCM.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
+  </ItemGroup>
+
+</Project>
