@@ -27,7 +27,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace FSG.HCM.Core
 {
-    [Authorize]
+    //[Authorize]
     public class BaseService<T, D, E> : ApplicationService, IApplicationService
          where T : BaseEntity<T>
      where D : DbContext

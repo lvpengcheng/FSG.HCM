@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Dapper;
@@ -24,7 +23,7 @@ namespace FSG.HCM.Core
     [DependsOn(typeof(AbpAutoMapperModule))]
     [DependsOn(typeof(AbpObjectMappingModule))]
     [DependsOn(typeof(AbpDapperModule))]
-    public class BaseModule : AbpModule
+    public class BaseMsSqlModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -32,11 +31,11 @@ namespace FSG.HCM.Core
             {
                 /* The main point to change your DBMS.
                  * See also CompanyNameProjectNameMigrationsDbContextFactory for EF Core tooling. */
-                options.UseMySQL();
-                //options.UseSqlServer();
+                //options.UseMySQL();
+                options.UseSqlServer();
             });
         }
 
-       
+
     }
 }
