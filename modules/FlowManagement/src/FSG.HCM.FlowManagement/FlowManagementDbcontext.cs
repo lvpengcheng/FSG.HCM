@@ -1,4 +1,4 @@
-﻿using Aspose.Pdf.Drawing;
+﻿using FSG.HCM.Core;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,14 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Data;
 using Volo.Abp.Users;
-using FSG.HCM.Core;
 
-namespace FSG.HCM.Onboarding
+namespace FSG.HCM.FlowManagement
 {
-    [ConnectionStringName("Onboarding")]
-    public class OnboardingDbcontext : BaseDbContext<OnboardingDbcontext>
+    [ConnectionStringName("Flow")]
+    public class FlowManagementDbcontext : BaseDbContext<FlowManagementDbcontext>
     {
-        public DbSet<Emp> Emps { get; set; }
+        public DbSet<EmpTest> Emps { get; set; }
 
         //public DbSet<Test> Tests { get; set; }
 
@@ -25,7 +24,7 @@ namespace FSG.HCM.Onboarding
         //public DbSet<SurveyDetail> SurveyDetails { get; set; }
 
         private readonly ICurrentUser _currentUser;
-        public OnboardingDbcontext(DbContextOptions<OnboardingDbcontext> options, ICurrentUser currentUser) : base(options)
+        public FlowManagementDbcontext(DbContextOptions<FlowManagementDbcontext> options, ICurrentUser currentUser) : base(options)
         {
             _currentUser = currentUser;
         }
