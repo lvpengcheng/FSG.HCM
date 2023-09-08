@@ -11,7 +11,7 @@ namespace FSG.HCM.Onboarding.Permissions
     {
         public const string GroupName = "AbpIdentity";
 
-        public static class DataDictionaryManagement
+        public static class Onboarding
         {
             public const string Default = GroupName + ".Onboarding";
             public const string Create = Default + ".Create";
