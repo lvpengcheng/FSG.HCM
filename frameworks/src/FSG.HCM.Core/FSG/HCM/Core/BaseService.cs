@@ -630,10 +630,10 @@ namespace FSG.HCM.Core
             header.AppendChild(watermarkPara.Clone(true));
         }
 
-        //public Dictionary<string, dynamic> Eval(string jObj)
-        //{
-        //    return new CalcEngine().Eval(jObj);
-        //}
+        public Dictionary<string, dynamic> Eval(string jObj)
+        {
+            return new CalcEngine().Eval(jObj);
+        }
 
     }
 
