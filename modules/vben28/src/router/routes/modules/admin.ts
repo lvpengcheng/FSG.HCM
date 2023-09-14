@@ -94,6 +94,16 @@ const admin: AppRouteModule = {
         policy: 'AbpIdentity.LanguageTexts',
       },
     },
+    {
+      path: 'flow',
+      name: 'flow',
+      component: () => import('/@/views/flow/index.vue'),
+      meta: {
+        title: t('流程设计'),
+        icon: 'ant-design:font-size-outlined',
+        policy: 'AbpIdentity.LanguageTexts',
+      },
+    },
   ],
 };
 

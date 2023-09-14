@@ -32,9 +32,10 @@ namespace FSG.HCM.Onboarding
 
         protected override bool ShouldFilterEntity<TEntity>(IMutableEntityType entityType)
         {
+            //此处可以确定那些情况下需要进行数据的过滤，哪些不需要进行过滤
             //if (typeof(IMayHaveOrganizationUnit).IsAssignableFrom(typeof(TEntity)))
             //{
-            return false;
+            return true;
             //}
 
             return base.ShouldFilterEntity<TEntity>(entityType);
@@ -53,9 +54,21 @@ namespace FSG.HCM.Onboarding
         //}
 
         [DbFunction("DataPermission")]
-        public static bool DataPermission(int objString)
+        public static bool DataPermission(string name, string userId)
         {
             throw new NotImplementedException();
+            var sqlStr = $"""
+                CREATE DEFINER=`root`@`%` FUNCTION `DataPermission`(name varchar(200),userId varchar(200)) RETURNS tinyint(1)
+                BEGIN
+                	#Routine body goes here...
+                 if name='李四' 
+                 THEN
+                 RETURN 1;
+                 ELSE
+                 RETURN 0;
+                 end if;
+                END
+                """;
         }
 
         //此处可以进行全局的数据过滤，准备在这里注入一个标准的存储过程，处理AUDL时
@@ -65,11 +78,18 @@ namespace FSG.HCM.Onboarding
             //var x = JsonConvert.SerializeObject(TEntity);
             //Expression<Func<TEntity, bool>> isActiveFilter = e => (EF.Property<string>(e, "Name") == "Name200");
             Guid? userId = _currentUser.Id;
-            Expression<Func<TEntity, bool>> isActiveFilter = e => (DataPermission(1));
+            //Expression<Func<TEntity, bool>> isActiveFilter = e => (CheckPermission(EF.Property<string>(e, "Name"))==true);
+
+            Expression<Func<TEntity, bool>> isActiveFilter = e => (DataPermission(EF.Property<string>(e, "Name"),userId.ToString())==true);
             expression = expression == null
             ? isActiveFilter
             : CombineExpressions(expression, isActiveFilter);
             return expression;
+        }
+
+        private bool CheckPermission(string name)
+        {
+            return true;
         }
 
 
@@ -80,7 +100,7 @@ namespace FSG.HCM.Onboarding
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.HasDbFunction(() => DataPermission(1));
+            //modelBuilder.HasDbFunction(() => DataPermission("1","2"));
         }
     }
 }
