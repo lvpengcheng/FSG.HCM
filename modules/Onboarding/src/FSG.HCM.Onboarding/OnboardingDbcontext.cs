@@ -35,7 +35,7 @@ namespace FSG.HCM.Onboarding
             //此处可以确定那些情况下需要进行数据的过滤，哪些不需要进行过滤
             //if (typeof(IMayHaveOrganizationUnit).IsAssignableFrom(typeof(TEntity)))
             //{
-            return true;
+            return false;
             //}
 
             return base.ShouldFilterEntity<TEntity>(entityType);

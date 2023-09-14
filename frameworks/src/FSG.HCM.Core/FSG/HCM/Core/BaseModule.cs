@@ -1,10 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Senparc.Weixin.RegisterServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
@@ -28,6 +31,7 @@ namespace FSG.HCM.Core
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+           
             Configure<AbpDbContextOptions>(options =>
             {
                 /* The main point to change your DBMS.
@@ -38,5 +42,16 @@ namespace FSG.HCM.Core
         }
 
        
+
+            private static IConfigurationRoot BuildConfiguration()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false);
+
+            return builder.Build();
+        }
+
+
     }
 }
