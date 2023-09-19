@@ -1,13 +1,3 @@
 <template>
-  <flow-panel />
+  <div>a</div>
 </template>
-
-<script>
-  import FlowPanel from '../../../src/components/ef/panel.vue';
-  export default {
-    name: 'App',
-    components: {
-      FlowPanel,
-    },
-  };
-</script>

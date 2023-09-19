@@ -22,6 +22,13 @@ namespace FSG.HCM.Onboarding
             base.OnApplicationInitialization(context);
         }
 
+        public override void OnPostApplicationInitialization(ApplicationInitializationContext context)
+        {
+            // 应用程序初始化的时候注册hangfire
+            context.CreateRecurringJob2();
+            base.OnPostApplicationInitialization(context);
+        }
+
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
