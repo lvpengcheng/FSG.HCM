@@ -1,8 +1,15 @@
 ﻿using FSG.HCM.Core;
 using Humanizer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Senparc.CO2NET;
+using Senparc.CO2NET.RegisterServices;
+using Senparc.Weixin.Entities;
+using Senparc.Weixin;
+using Senparc.Weixin.RegisterServices;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +19,10 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.Domain.Entities.Caching;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Senparc.Weixin.MP;
 
 namespace FSG.HCM.Onboarding
 {
@@ -19,6 +30,28 @@ namespace FSG.HCM.Onboarding
     {
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
         {
+            var app = context.GetApplicationBuilder();
+            var config = context.GetConfiguration();
+            SenparcSetting senparcSetting= new SenparcSetting();
+            SenparcWeixinSetting senparcWeixinSetting = new SenparcWeixinSetting();
+            senparcSetting.IsDebug = bool.Parse(config["SenparcSetting:IsDebug"]);
+            senparcSetting.Cache_Memcached_Configuration = config["SenparcSetting:Cache_Memcached_Configuration"];
+            senparcSetting.Cache_Redis_Configuration= config["SenparcSetting:Cache_Redis_Configuration"];
+            senparcSetting.DefaultCacheNamespace= config["SenparcSetting:DefaultCacheNamespace"];
+            senparcSetting.SenparcUnionAgentKey= config["SenparcSetting:SenparcUnionAgentKey"];
+
+            senparcWeixinSetting.Token = config["SenparcWeixinSetting:Token"];
+            senparcWeixinSetting.EncodingAESKey = config["SenparcWeixinSetting:EncodingAESKey"];
+            senparcWeixinSetting.WeixinAppId = config["SenparcWeixinSetting:WeixinAppId"];
+            senparcWeixinSetting.WeixinAppSecret = config["SenparcWeixinSetting:WeixinAppSecret"];
+
+
+            IRegisterService register = RegisterService.Start(senparcSetting)
+                                                .UseSenparcGlobal(false, null);
+
+            //开始注册微信信息，必须！
+            register.UseSenparcWeixin(senparcWeixinSetting);
+            register.RegisterMpAccount(senparcWeixinSetting, "CtalentDemo");
             base.OnApplicationInitialization(context);
         }
 
@@ -32,6 +65,8 @@ namespace FSG.HCM.Onboarding
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            var configuration = BuildConfiguration();
+            context.Services.AddSenparcGlobalServices(configuration).AddSenparcWeixinServices(configuration);
             context.Services.AddAssemblyOf<OnboardingModule>();
             Configure<AbpAutoMapperOptions>(options =>
             {
@@ -82,6 +117,18 @@ namespace FSG.HCM.Onboarding
             //});
 
             ConfigureConventionalControllers();
+        }
+
+
+        
+
+        private static IConfigurationRoot BuildConfiguration()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false);
+
+            return builder.Build();
         }
 
         private void ConfigureConventionalControllers()

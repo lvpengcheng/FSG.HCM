@@ -31,7 +31,7 @@ namespace FSG.HCM.Core
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-           
+
             Configure<AbpDbContextOptions>(options =>
             {
                 /* The main point to change your DBMS.
@@ -42,15 +42,6 @@ namespace FSG.HCM.Core
         }
 
        
-
-            private static IConfigurationRoot BuildConfiguration()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false);
-
-            return builder.Build();
-        }
 
 
     }
