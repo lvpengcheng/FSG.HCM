@@ -2,7 +2,9 @@
 using FSG.HCM.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Senparc.NeuChar.Entities;
 using Senparc.Weixin.MP.AdvancedAPIs;
+using Senparc.Weixin.MP.AdvancedAPIs.GroupMessage;
 using Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage;
 using System;
 using System.Collections.Generic;
@@ -38,7 +40,27 @@ namespace FSG.HCM.Onboarding
             //    keyword4 = new TemplateDataItem(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "#99CC00"),
             //    remark = new TemplateDataItem("充值金额成功", "#0099CC")
             //};
+            List<Article> articleList= new List<Article>();
+            articleList.Add(new Article()
+            {
+                Title = "测试更多标题",
+                Description = "测试更多描述",
+                Url = "https://www.baidu.com",
+                PicUrl = "https://sdk.weixin.senparc.com/Images/qrcode.jpg"
+            });
 
+            var news = articleList.Select(z => new NewsModel()
+            {
+                title = z.Title,
+                content = "点击【阅读原文】访问",//内容暂时无法获取到
+                digest = z.Description,
+                content_source_url = z.Url,
+                thumb_url = z.PicUrl,
+                //thumb_media_id=Guid.NewGuid().ToString(),
+            }).ToArray();
+            //上传临时素材
+            //var newsResult =MediaApi.UploadTemporaryNews("wx58c8a3f9e8bd0abb", news: news);
+            //await CustomApi.SendMpNewsAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", newsResult.media_id, 10000, "");
             await CustomApi.SendTextAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "hello");
             await TemplateApi.SendTemplateMessageAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "UbZqcD8CG4krEHnZAcEx4jTJsMeECdqe3HsjiZks1aQ", "","",null,1000);
             return "aaa";

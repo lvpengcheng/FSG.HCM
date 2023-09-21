@@ -23,6 +23,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Senparc.Weixin.MP;
+using Senparc.Weixin.MP.MessageHandlers;
+using Senparc.Weixin.MP.MessageHandlers.Middleware;
 
 namespace FSG.HCM.Onboarding
 {
@@ -32,14 +34,14 @@ namespace FSG.HCM.Onboarding
         {
             var app = context.GetApplicationBuilder();
             var config = context.GetConfiguration();
-            SenparcSetting senparcSetting= new SenparcSetting();
+            SenparcSetting senparcSetting = new SenparcSetting();
             SenparcWeixinSetting senparcWeixinSetting = new SenparcWeixinSetting();
             senparcSetting.IsDebug = bool.Parse(config["SenparcSetting:IsDebug"]);
             senparcSetting.Cache_Memcached_Configuration = config["SenparcSetting:Cache_Memcached_Configuration"];
-            senparcSetting.Cache_Redis_Configuration= config["SenparcSetting:Cache_Redis_Configuration"];
-            senparcSetting.DefaultCacheNamespace= config["SenparcSetting:DefaultCacheNamespace"];
-            senparcSetting.SenparcUnionAgentKey= config["SenparcSetting:SenparcUnionAgentKey"];
-
+            senparcSetting.Cache_Redis_Configuration = config["SenparcSetting:Cache_Redis_Configuration"];
+            senparcSetting.DefaultCacheNamespace = config["SenparcSetting:DefaultCacheNamespace"];
+            senparcSetting.SenparcUnionAgentKey = config["SenparcSetting:SenparcUnionAgentKey"];
+            //公众号设置
             senparcWeixinSetting.Token = config["SenparcWeixinSetting:Token"];
             senparcWeixinSetting.EncodingAESKey = config["SenparcWeixinSetting:EncodingAESKey"];
             senparcWeixinSetting.WeixinAppId = config["SenparcWeixinSetting:WeixinAppId"];
@@ -52,6 +54,15 @@ namespace FSG.HCM.Onboarding
             //开始注册微信信息，必须！
             register.UseSenparcWeixin(senparcWeixinSetting);
             register.RegisterMpAccount(senparcWeixinSetting, "CtalentDemo");
+            //可以对微信的对话进行劫持
+            app.UseMessageHandlerForMp("/WeixinAsync",
+            (stream, postModel, maxRecordCount, serviceProvider)
+              => new CustomMessageHandler(stream, postModel, maxRecordCount, false, serviceProvider),
+             options
+            =>
+            {
+               options.AccountSettingFunc = context => Senparc.Weixin.Config.SenparcWeixinSetting;
+            });
             base.OnApplicationInitialization(context);
         }
 
@@ -120,7 +131,7 @@ namespace FSG.HCM.Onboarding
         }
 
 
-        
+
 
         private static IConfigurationRoot BuildConfiguration()
         {
