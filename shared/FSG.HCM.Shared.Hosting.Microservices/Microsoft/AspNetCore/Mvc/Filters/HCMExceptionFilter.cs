@@ -22,6 +22,7 @@ public class HCMExceptionFilter : AbpExceptionFilter
         var exceptionToErrorInfoConverter = context.GetRequiredService<IExceptionToErrorInfoConverter>();
         var remoteServiceErrorInfo = exceptionToErrorInfoConverter.Convert(context.Exception, options =>
         {
+
             options.SendExceptionsDetailsToClients = exceptionHandlingOptions.SendExceptionsDetailsToClients;
             options.SendStackTraceToClients = exceptionHandlingOptions.SendStackTraceToClients;
         });

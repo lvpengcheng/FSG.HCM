@@ -4,10 +4,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Senparc.Weixin.RegisterServices;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp;
+using Volo.Abp.AspNetCore.ExceptionHandling;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
@@ -39,6 +41,20 @@ namespace FSG.HCM.Core
                 options.UseMySQL();
                 //options.UseSqlServer();
             });
+
+            Configure<AbpExceptionHandlingOptions>(options =>
+            {
+
+#if DEBUG
+                options.SendExceptionsDetailsToClients = true;
+                options.SendStackTraceToClients = true;
+#else
+             options.SendExceptionsDetailsToClients = false;
+                options.SendStackTraceToClients = false;
+#endif
+
+            });
+
         }
 
        

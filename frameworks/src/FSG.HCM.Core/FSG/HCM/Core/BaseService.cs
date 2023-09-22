@@ -29,6 +29,7 @@ namespace FSG.HCM.Core
 {
     //[Authorize]
     //[ServiceFilter(typeof(BaseFilter))]
+    [WrapResult]
     public class BaseService<T, D, E> : ApplicationService, IApplicationService
          where T : BaseEntity<T>
      where D : DbContext

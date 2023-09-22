@@ -101,6 +101,14 @@ namespace FSG.HCM.Onboarding
                 //options.UseSqlServer();
             });
 
+
+            var connectionString = configuration.GetConnectionString("Onboarding");
+            var freeSql = new FreeSql.FreeSqlBuilder()
+                .UseConnectionString(FreeSql.DataType.MySql, connectionString)
+                .Build();
+
+            context.Services.AddSingleton<IFreeSql>(freeSql);
+
             context.Services.AddSingleton<SqlExecuter<OnboardingDbcontext>>();
 
             ////Register a factory method that resolves from IServiceProvider
