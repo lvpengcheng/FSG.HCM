@@ -6,8 +6,6 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Directory.Build.targets", "."]
-COPY ["NuGet.Config", "."]
 COPY ["services/host/FSG.HCM.HttpApi.Host/FSG.HCM.HttpApi.Host.csproj", "services/host/FSG.HCM.HttpApi.Host/"]
 COPY ["frameworks/src/FSG.HCM.CAP.EntityFrameworkCore/FSG.HCM.CAP.EntityFrameworkCore.csproj", "frameworks/src/FSG.HCM.CAP.EntityFrameworkCore/"]
 COPY ["frameworks/src/FSG.HCM.CAP/FSG.HCM.CAP.csproj", "frameworks/src/FSG.HCM.CAP/"]
