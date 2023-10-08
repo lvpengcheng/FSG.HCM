@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.DataDictionaryManagement.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary.Code">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary.DisplayText">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionary.Details">
+            <summary>
+            字典明细集合
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.DataDictionaryId">
+            <summary>
+            所属字典Id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.Code">
+            <summary>
+            字典明细编码
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.Order">
+            <summary>
+            展现列表时排序用
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.DisplayText">
+            <summary>
+            英文显示名
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Aggregates.DataDictionaryDetail.IsEnabled">
+            <summary>
+            启/停用(默认启用)
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryManager.CreateAsync(System.String,System.String,System.String)">
+            <summary>
+            创建字典类型
+            </summary>
+            <param name="code"></param>
+            <param name="displayText"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryManager.CreateDetailAsync(System.Guid,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            新增字典明细
+            </summary>
+            <param name="dataDictionaryId"></param>
+            <param name="code"></param>
+            <param name="displayText"></param>
+            <param name="description"></param>
+            <param name="order"></param>
+            <exception cref="T:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryDomainException"></exception>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryManager.SetStatus(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            设置字典明细状态
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryManager.UpdateDetailAsync(System.Guid,System.Guid,System.String,System.String,System.Int32)">
+            <summary>
+            更新数据字典明细
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryManager.DeleteDataDictionaryTypeAsync(System.Guid)">
+            <summary>
+            删除字典类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.IDataDictionaryManager.CreateAsync(System.String,System.String,System.String)">
+            <summary>
+            创建字典类型
+            </summary>
+            <param name="code"></param>
+            <param name="displayText"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.IDataDictionaryManager.CreateDetailAsync(System.Guid,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            新增字典明细
+            </summary>
+            <param name="dataDictionaryId"></param>
+            <param name="code"></param>
+            <param name="displayText"></param>
+            <param name="description"></param>
+            <param name="order"></param>
+            <exception cref="T:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryDomainException"></exception>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.IDataDictionaryManager.SetStatus(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            设置字典明细状态
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.IDataDictionaryManager.UpdateDetailAsync(System.Guid,System.Guid,System.String,System.String,System.Int32)">
+            <summary>
+            更新数据字典明细
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.IDataDictionaryManager.DeleteDataDictionaryTypeAsync(System.Guid)">
+            <summary>
+            删除字典类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaryDomainService.UnitOfWorkManager">
+            <summary>
+            工作单元管理器
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaryDomainService.DistributedEventBus">
+            <summary>
+            分布式事件总线
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaryDomainService.ObjectMapper">
+            <summary>
+            对象映射器
+            </summary>
+        </member>
+    </members>
+</doc>

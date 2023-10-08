@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.Shared.Hosting.Microservices</name>
+    </assembly>
+    <members>
+        <member name="M:FSG.HCM.HCMSharedHostingMicroserviceModule.ConfigureAbpExceptions(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            异常处理
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.HCMSharedHostingMicroserviceModule.ConfigAntiForgery">
+            <summary>
+            阻止跨站点请求伪造
+            https://docs.microsoft.com/zh-cn/aspnet/core/security/anti-request-forgery?view=aspnetcore-6.0
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.HCMSharedHostingMicroserviceModule.ConfigureCors(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            配置跨域
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.HCMSharedHostingMicroserviceModule.ConfigureLocalization">
+            <summary>
+            多语言配置
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.HCMSharedHostingMicroserviceModule.ConfigureHealthChecks(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            健康检查
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseRequestLog(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            记录请求响应日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseHCMRequestLocalization(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            多语言中间件
+            <remarks>浏览器传递的请求头：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6而abp钟简体中文为：zh-Hans</remarks>
+            <example>
+            app.UseHCMRequestLocalization();
+            </example>
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.Filters.HCMExceptionFilter.WrapResultHandler(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            webapi有WrapResult特性标签处理逻辑
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.Filters.HCMExceptionFilter.DefaultHandlerAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            默认异常处理逻辑
+            </summary>
+        </member>
+        <member name="T:Swagger.CachingSwaggerProvider">
+            <summary>
+            swagger注释加载慢，把文档添加到缓存
+            </summary>
+        </member>
+        <member name="T:Swagger.EnumSchemaFilter">
+            <summary>
+            swagger 枚举映射，
+            原因：前端代理生成枚举是数字
+            </summary>
+        </member>
+        <member name="T:Swagger.HiddenAbpDefaultApiFilter">
+            <summary>
+            在使用nswag的时候，原生默认的api导致生产的代理类存在问题
+            所有隐藏原生的api，重写路由
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.DefaultHttpExceptionStatusCodeFinder">
+            <summary>
+            修改Abp 返回状态码
+            原因： 抛出BusinessException异常 不应该抛403异常
+            </summary>
+        </member>
+    </members>
+</doc>

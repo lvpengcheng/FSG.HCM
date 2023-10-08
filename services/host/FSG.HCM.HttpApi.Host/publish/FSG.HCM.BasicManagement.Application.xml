@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.BasicManagement.Application</name>
+    </assembly>
+    <members>
+        <member name="M:FSG.HCM.BasicManagement.AuditLogs.AuditLogAppService.GetListAsync(FSG.HCM.BasicManagement.AuditLogs.PagingAuditLogInput)">
+            <summary>
+            分页查询审计日志
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.BasicManagementApplicationModule.ConfigureMagicodes(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            配置Magicodes.IE
+            Excel导入导出
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RoleAppService.AllListAsync">
+            <summary>
+            获取所有角色
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RoleAppService.ListAsync(FSG.HCM.BasicManagement.Roles.Dtos.PagingRoleListInput)">
+            <summary>
+            分页查询角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RoleAppService.CreateAsync(Volo.Abp.Identity.IdentityRoleCreateDto)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RoleAppService.UpdateAsync(FSG.HCM.BasicManagement.Roles.Dtos.UpdateRoleInput)">
+            <summary>
+            更新角色
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RoleAppService.DeleteAsync(FSG.HCM.Core.IdInput)">
+            <summary>
+            删除角色
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RolePermissionAppService.GetPermissionAsync(FSG.HCM.BasicManagement.Roles.Dtos.GetPermissionInput)">
+            <summary>
+            获取所有权限
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RolePermissionAppService.UpdatePermissionAsync(FSG.HCM.BasicManagement.Roles.Dtos.UpdateRolePermissionsInput)">
+            <summary>
+            更新权限
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RolePermissionAppService.BuildTreeData(System.Collections.Generic.List{Volo.Abp.PermissionManagement.PermissionGroupDto})">
+            <summary>
+            生成权限树
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Roles.RolePermissionAppService.RecursionMenu(System.Collections.Generic.List{Volo.Abp.PermissionManagement.PermissionGrantInfoDto},System.String)">
+            <summary>
+            递归菜单
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.AccountAppService.GenerateJwt(System.Guid,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            生成jwt token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.ListAsync(FSG.HCM.BasicManagement.Users.Dtos.PagingUserListInput)">
+            <summary>
+            分页查询用户
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.ExportAsync(FSG.HCM.BasicManagement.Users.Dtos.PagingUserListInput)">
+            <summary>
+            用户导出列表
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.CreateAsync(Volo.Abp.Identity.IdentityUserCreateDto)">
+            <summary>
+            新增用户
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.UpdateAsync(FSG.HCM.BasicManagement.Users.Dtos.UpdateUserInput)">
+            <summary>
+            更新用户
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.DeleteAsync(FSG.HCM.Core.IdInput)">
+            <summary>
+            删除用户
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.GetRoleByUserId(FSG.HCM.Core.IdInput)">
+            <summary>
+            获取用户角色信息
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.ChangePasswordAsync(Volo.Abp.Account.ChangePasswordInput)">
+            <summary>
+            修改密码
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.BasicManagement.Users.UserAppService.LockAsync(FSG.HCM.BasicManagement.Users.Dtos.LockUserInput)">
+            <summary>
+            锁定用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

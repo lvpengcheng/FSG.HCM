@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.Localization</name>
+    </assembly>
+    <members>
+        <member name="F:FSG.HCM.HCMLocalizationConsts.NameSpace">
+            <summary>
+            名称空间
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.HCMLocalizationConsts.DefaultCultureName">
+            <summary>
+            默认语言
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.HCMLocalizationConsts.DefaultLocalizationResourceVirtualPath">
+            <summary>
+            默认本地化文件虚拟路径
+            </summary>
+        </member>
+    </members>
+</doc>

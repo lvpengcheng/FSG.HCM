@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.DataDictionaryManagement.Application</name>
+    </assembly>
+    <members>
+        <member name="F:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService._dataDictionaryRepository">
+            <summary>
+             注意 为了快速直接注入仓库层 规范上是不允许的
+             这里注入仓储也只是为了查询分页
+             如果是其他的操作全部通过对应manger进行操作
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService.GetPagingListAsync(FSG.HCM.DataDictionaryManagement.DataDictionaries.Dtos.PagingDataDictionaryInput)">
+            <summary>
+            分页查询字典项
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService.GetPagingDetailListAsync(FSG.HCM.DataDictionaryManagement.DataDictionaries.Dtos.PagingDataDictionaryDetailInput)">
+            <summary>
+            分页查询字典项明细
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService.CreateAsync(FSG.HCM.DataDictionaryManagement.DataDictionaries.Dtos.CreateDataDictinaryInput)">
+            <summary>
+            创建字典类型
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService.CreateDetailAsync(FSG.HCM.DataDictionaryManagement.DataDictionaries.Dtos.CreateDataDictinaryDetailInput)">
+            <summary>
+            新增字典明细
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.DataDictionaryManagement.DataDictionaries.DataDictionaryAppService.SetStatus(FSG.HCM.DataDictionaryManagement.DataDictionaries.Dtos.SetDataDictinaryDetailInput)">
+            <summary>
+            设置字典明细状态
+            </summary>
+        </member>
+    </members>
+</doc>

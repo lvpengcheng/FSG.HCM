@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.NotificationManagement.Domain.Shared</name>
+    </assembly>
+    <members>
+        <member name="F:FSG.HCM.NotificationManagement.NotificationManagementConsts.NameSpace">
+            <summary>名称空间</summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.NotificationManagementConsts.DefaultCultureName">
+            <summary>默认语言</summary>
+        </member>
+        <member name="T:FSG.HCM.NotificationManagement.Notifications.Enums.MessageLevel">
+            <summary>
+            消息等级
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.Enums.MessageLevel.Warning">
+            <summary>
+            警告
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.Enums.MessageLevel.Information">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.Enums.MessageLevel.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.NotificationManagement.Notifications.Enums.MessageType">
+            <summary>
+            消息类型 
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.Enums.MessageType.BroadCast">
+            <summary>
+            广播消息
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.Enums.MessageType.Common">
+            <summary>
+            普通文本消息
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.Title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.MessageLevel">
+            <summary>
+            消息等级
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.SenderId">
+            <summary>
+            发送人
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationEto.NotificationSubscriptions">
+            <summary>
+            关联属性1:N 消息订阅者集合
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationSubscriptionEto.ReceiveId">
+            <summary>
+            订阅人
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationSubscriptionEto.Read">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.NotificationManagement.Notifications.Etos.NotificationSubscriptionEto.ReadTime">
+            <summary>
+            已读时间
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.MaxLengths.NotificationMaxLengths.Title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.NotificationManagement.Notifications.MaxLengths.NotificationMaxLengths.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+    </members>
+</doc>

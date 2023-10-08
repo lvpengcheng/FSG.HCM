@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.LanguageManagement.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:FSG.HCM.LanguageManagement.DynamicResourceLocalizer">
+            <summary>
+            动态资源
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.ILocalizationHelper.IsValidResourceName(System.String)">
+            <summary>
+            资源是否有效
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.ILocalizationHelper.GetAllResourceName">
+            <summary>
+            获取所有资源名
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageManagementDomainService.UnitOfWorkManager">
+            <summary>
+            工作单元管理器
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageManagementDomainService.DistributedEventBus">
+            <summary>
+            分布式事件总线
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageManagementDomainService.ObjectMapper">
+            <summary>
+            对象映射器
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.UiCultureName">
+            <summary>
+            Ui语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.FlagIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.IsEnabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.IsDefault">
+            <summary>
+            是否默认语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.SetCultureName(System.String)">
+            <summary>
+            设置语言名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.SetUiCultureName(System.String)">
+            <summary>
+            设置Ui语言名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.SetDisplayName(System.String)">
+            <summary>
+            设置显示名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.SetFlagIcon(System.String)">
+            <summary>
+            设置图标
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.Aggregates.Language.Update(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新语言
+            </summary> 
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.Caches.LanguageCacheInvalidator">
+            <summary>
+            当语言实体有改变的时候，清除缓存
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.ListAsync(System.Nullable{System.Boolean})">
+            <summary>
+            查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.GetListAsync(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.CountAsync(System.String)">
+            <summary>
+            获取总条数
+            </summary>
+            <param name="filter">查询条件 cultureName or uiCultureName or displayName</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.CreateAsync(System.Guid,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            创建语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.UpdateAsync(System.Guid,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.DeleteAsync(System.Guid)">
+            <summary>
+            删除语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.GetAsync(System.Guid)">
+            <summary>
+            通过Id获取语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.GetAsync(System.String)">
+            <summary>
+            获取指定语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageManager.SetDefaultAsync(System.Guid)">
+            <summary>
+            设置默认语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageRepository.ListAsync(System.Nullable{System.Boolean})">
+            <summary>
+            查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageRepository.ListAsync(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询语言
+            </summary>
+            <param name="maxResultCount">返回最大条数</param>
+            <param name="skipCount">跳过条数</param>
+            <param name="filter">查询条件 cultureName or uiCultureName or displayName</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageRepository.CountAsync(System.String)">
+            <summary>
+            获取总条数
+            </summary>
+            <param name="filter">查询条件 cultureName or uiCultureName or displayName</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageRepository.FindAsync(System.String)">
+            <summary>
+            查询指定语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageRepository.FindDefaultLanguageAsync">
+            <summary>
+            获取默认语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.ListAsync(System.Nullable{System.Boolean})">
+            <summary>
+            查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.GetListAsync(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.CountAsync(System.String)">
+            <summary>
+            获取总条数
+            </summary>
+            <param name="filter">查询条件 cultureName or uiCultureName or displayName</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.CreateAsync(System.Guid,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            创建语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.UpdateAsync(System.Guid,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.DeleteAsync(System.Guid)">
+            <summary>
+            删除语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.GetAsync(System.Guid)">
+            <summary>
+            通过Id获取语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.GetAsync(System.String)">
+            <summary>
+            获取指定语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.LanguageManager.SetDefaultAsync(System.Guid)">
+            <summary>
+            设置默认语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.ResourceName">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.SetResourceName(System.String)">
+            <summary>
+            设置资源名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.SetCultureName(System.String)">
+            <summary>
+            设置语言名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.SetName(System.String)">
+            <summary>
+            设置名称
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.SetValue(System.String)">
+            <summary>
+            设置值
+            </summary>        
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.Aggregates.LanguageText.Update(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新语言文本
+            </summary> 
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.ListAsync(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+            <param name="maxResultCount">返回最大条数</param>
+            <param name="skipCount">跳过条数</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.CountAsync(System.String,System.String,System.String)">
+            <summary>
+            查询语言文本数量
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.CreateAsync(System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.UpdateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="name">键</param> 
+            <param name="value">值</param> 
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.DeleteAsync(System.Guid)">
+            <summary>
+            删除语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextManager.FindAsync(System.String,System.String)">
+            <summary>
+            根据资源名称和语言名称查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextRepository.ListAsync(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+            <param name="maxResultCount">返回最大条数</param>
+            <param name="skipCount">跳过条数</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextRepository.CountAsync(System.String,System.String,System.String)">
+            <summary>
+            查询语言文本数量
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextRepository.FindAsync(System.String,System.String)">
+            <summary>
+            查询语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextRepository.FindAsync(System.String,System.String,System.String)">
+            <summary>
+            查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="name">名称</param> 
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.ListAsync(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+            <param name="maxResultCount">返回最大条数</param>
+            <param name="skipCount">跳过条数</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.CountAsync(System.String,System.String,System.String)">
+            <summary>
+            查询语言文本数量
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="filter">筛选条件：name or value</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.CreateAsync(System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.UpdateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+            <param name="name">键</param> 
+            <param name="value">值</param> 
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.DeleteAsync(System.Guid)">
+            <summary>
+            删除语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.LanguageTextManager.FindAsync(System.String,System.String)">
+            <summary>
+            根据资源名称和语言名称查询语言文本
+            </summary>
+            <param name="cultureName">语言</param>
+            <param name="resourceName">资源名称</param>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LocalizationHelper.IsValidResourceName(System.String)">
+            <summary>
+            资源是否有效
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LocalizationHelper.GetAllResourceName">
+            <summary>
+            获取所有资源名
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Settings.LanguageManagementSettings.Group">
+            <summary>
+            系统控制分组
+            </summary>
+        </member>
+    </members>
+</doc>

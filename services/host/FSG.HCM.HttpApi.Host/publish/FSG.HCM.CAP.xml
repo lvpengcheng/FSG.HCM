@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.CAP</name>
+    </assembly>
+    <members>
+        <member name="M:FSG.HCM.CAP.HCMCapConsumerServiceSelector.#ctor(System.IServiceProvider,Microsoft.Extensions.Options.IOptions{Volo.Abp.EventBus.Distributed.AbpDistributedEventBusOptions})">
+            <summary>
+            Creates a new <see cref="T:DotNetCore.CAP.Internal.ConsumerServiceSelector" />.
+            </summary>
+        </member>
+    </members>
+</doc>

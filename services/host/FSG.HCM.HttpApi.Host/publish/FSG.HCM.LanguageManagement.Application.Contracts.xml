@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.LanguageManagement.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput">
+            <summary>
+            创建语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput.UiCultureName">
+            <summary>
+            Ui语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput.FlagIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.CreateLanguageInput.IsEnabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.DeleteLanguageInput">
+            <summary>
+            删除语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.DeleteLanguageInput.Id">
+            <summary>
+            语言Id
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.ILanguageAppService">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.AllListAsync">
+            <summary>
+            获取所有语言
+            </summary>     
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.PageAsync(FSG.HCM.LanguageManagement.Languages.PageLanguageInput)">
+            <summary>
+            分页查询语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.CreateAsync(FSG.HCM.LanguageManagement.Languages.CreateLanguageInput)">
+            <summary>
+            创建语言
+            </summary>    
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.UpdateAsync(FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput)">
+            <summary>
+            编辑语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.DeleteAsync(FSG.HCM.LanguageManagement.Languages.DeleteLanguageInput)">
+            <summary>
+            删除语言
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.Languages.ILanguageAppService.SetDefaultAsync(FSG.HCM.Core.IdInput)">
+            <summary>
+            设置默认语言
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.PageLanguageInput">
+            <summary>
+            创建语言
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput">
+            <summary>
+            创建语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.Id">
+            <summary>
+            语言Id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.UiCultureName">
+            <summary>
+            Ui语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.FlagIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.IsEnabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.CreationTime">
+            <summary>
+            创建时间
+            </summary>       
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.PageLanguageOutput.IsDefault">
+            <summary>
+            是否是默认语言
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput">
+            <summary>
+            删除语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.Id">
+            <summary>
+            语言Id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.UiCultureName">
+            <summary>
+            Ui语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.FlagIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.Languages.UpdateLanguageInput.IsEnabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput">
+            <summary>
+            创建语言文本
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput.ResourceName">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextAppService">
+            <summary>
+            语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextAppService.AllResourceListAsync">
+            <summary>
+            获取所有资源
+            </summary>    
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextAppService.PageAsync(FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextInput)">
+            <summary>
+            分页查询语言文本
+            </summary>
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextAppService.CreateAsync(FSG.HCM.LanguageManagement.LanguageTexts.CreateLanguageTextInput)">
+            <summary>
+            创建语言文本
+            </summary>    
+        </member>
+        <member name="M:FSG.HCM.LanguageManagement.LanguageTexts.ILanguageTextAppService.UpdateAsync(FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput)">
+            <summary>
+            编辑语言文本
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextInput">
+            <summary>
+            创建语言文本
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextInput.CultureName">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextInput.ResourceName">
+            <summary>
+            资源
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextInput.Filter">
+            <summary>
+            查询条件 name or value
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextOutput">
+            <summary>
+            创建语言文本
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextOutput.ResourceName">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextOutput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.PageLanguageTextOutput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput">
+            <summary>
+            删除语言文本
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput.ResourceName">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput.CultureName">
+            <summary>
+            语言名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.LanguageManagement.LanguageTexts.UpdateLanguageTextInput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+    </members>
+</doc>

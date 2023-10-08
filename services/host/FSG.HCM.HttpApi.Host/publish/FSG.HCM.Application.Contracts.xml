@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="M:FSG.HCM.Jobs.IRecurringJob.ExecuteAsync">
+            <summary>
+            执行任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FSG.HCM.Permissions.HCMPermissions.SystemManagement">
+            <summary>
+            系统管理扩展权限
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSG.HCM.DataDictionaryManagement.Domain.Shared</name>
+    </assembly>
+    <members>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.DataDictionaryId">
+            <summary>
+            所属字典Id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.Code">
+            <summary>
+            字典明细编码
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.Order">
+            <summary>
+            展现列表时排序用
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.DisplayText">
+            <summary>
+            英文显示名
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDetailDto.IsEnabled">
+            <summary>
+            启/停用(默认启用)
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDto.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDto.Code">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDto.DisplayText">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:FSG.HCM.DataDictionaryManagement.DataDictionaries.Dto.DataDictionaryDto.Details">
+            <summary>
+            字典明细集合
+            </summary>
+        </member>
+        <member name="F:FSG.HCM.DataDictionaryManagement.DataDictionaryManagementConsts.NameSpace">
+            <summary>名称空间</summary>
+        </member>
+        <member name="F:FSG.HCM.DataDictionaryManagement.DataDictionaryManagementConsts.DefaultCultureName">
+            <summary>默认语言</summary>
+        </member>
+    </members>
+</doc>
