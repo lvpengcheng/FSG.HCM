@@ -7,12 +7,12 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-RUN dotnet restore "FSG.HCM.HttpApi.Host.csproj"
+RUN dotnet restore 
 WORKDIR /src
-RUN dotnet build "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/build
+RUN dotnet build  -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish  -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
