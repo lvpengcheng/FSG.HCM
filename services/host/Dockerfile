@@ -4,18 +4,18 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
 
+
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["FSG.HCM.HttpApi.Host/FSG.HCM.HttpApi.Host.csproj", "FSG.HCM.HttpApi.Host/"]
-RUN dotnet restore "FSG.HCM.HttpApi.Host.csproj"
-COPY . .
-WORKDIR "/host/FSG.HCM.HttpApi.Host"
+COPY ["FSG.HCM.HttpApi.Host.csproj", ""]
+RUN dotnet restore "./FSG.HCM.HttpApi.Host.csproj" 
+WORKDIR /src
 RUN dotnet build "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "FSG.HCM.HttpApi.Host.csproj"  -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Hostdll"]
+ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Host.dll"]
