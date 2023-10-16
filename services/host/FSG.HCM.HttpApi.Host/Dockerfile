@@ -17,4 +17,4 @@ RUN dotnet publish "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/publish /p:U
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Hostdll"]
+ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Host.dll"]
