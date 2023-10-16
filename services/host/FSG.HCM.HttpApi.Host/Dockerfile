@@ -8,7 +8,6 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 
 RUN dotnet restore "FSG.HCM.HttpApi.Host.csproj"
-COPY . .
 RUN dotnet build "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/build
 
 FROM build AS publish
