@@ -9,7 +9,6 @@ WORKDIR /src
 
 RUN dotnet restore "FSG.HCM.HttpApi.Host.csproj"
 COPY . .
-WORKDIR "/src/services/host/FSG.HCM.HttpApi.Host"
 RUN dotnet build "FSG.HCM.HttpApi.Host.csproj" -c Release -o /app/build
 
 FROM build AS publish
