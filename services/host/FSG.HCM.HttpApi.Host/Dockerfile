@@ -9,5 +9,5 @@ WORKDIR /src
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY ..
 ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Host.dll"]
