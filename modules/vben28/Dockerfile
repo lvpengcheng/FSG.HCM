@@ -1,5 +1,8 @@
-FROM nginx:1.17.3-alpine as base
-EXPOSE 80
+FROM node:10
+COPY ./ /vue-docker
+WORKDIR /vue-docker
 
-
-CMD ["nginx", "-g", "daemon off;"]
+FROM nginx
+RUN mkdir /vue-docker
+COPY --from=0 /vue-docker/dist /vue-docker
+COPY nginx.conf /etc/nginx/nginx.conf
