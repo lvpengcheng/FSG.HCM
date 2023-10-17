@@ -2,9 +2,8 @@ FROM node:16-alpine as build-stage
 WORKDIR /appweb
 COPY . ./
 ENV NODE_OPTIONS=--max-old-space-size=16384
-RUN npm install pnpm -g
-RUN pnpm i
-RUN pnpm build
+RUN npm i
+RUN npm build
 
 FROM nginx:1.17.3-alpine as base
 EXPOSE 80
