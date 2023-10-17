@@ -6,8 +6,6 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-
-FROM base AS final
-WORKDIR /app
 COPY ..
+ENV ASPNETCORE_URLS http://*:80
 ENTRYPOINT ["dotnet", "FSG.HCM.HttpApi.Host.dll"]
