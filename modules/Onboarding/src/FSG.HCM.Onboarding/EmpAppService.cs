@@ -43,7 +43,7 @@ namespace FSG.HCM.Onboarding
             List<Article> articleList= new List<Article>();
             articleList.Add(new Article()
             {
-                Title = "测试更多标题1",
+                Title = "测试更多标题12",
                 Description = "测试更多描述",
                 Url = "https://www.baidu.com",
                 PicUrl = "https://sdk.weixin.senparc.com/Images/qrcode.jpg"
