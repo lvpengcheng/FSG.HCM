@@ -20,7 +20,6 @@ import { isDevMode } from './utils/env';
 if (isDevMode()) {
   import('ant-design-vue/es/style');
 }
-// import './components/ef/index.css';
 
 async function bootstrap() {
   const app = createApp(App);
