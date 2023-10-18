@@ -59,8 +59,8 @@ namespace FSG.HCM.Onboarding
                 //thumb_media_id=Guid.NewGuid().ToString(),
             }).ToArray();
             //上传临时素材
-            //var newsResult =MediaApi.UploadTemporaryNews("wx58c8a3f9e8bd0abb", news: news);
-            //await CustomApi.SendMpNewsAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", newsResult.media_id, 10000, "");
+            var newsResult = MediaApi.UploadTemporaryNews("wx58c8a3f9e8bd0abb", news: news);
+            await CustomApi.SendMpNewsAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", newsResult.media_id, 10000, "");
             await CustomApi.SendTextAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "hello");
             await TemplateApi.SendTemplateMessageAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "UbZqcD8CG4krEHnZAcEx4jTJsMeECdqe3HsjiZks1aQ", "","",null,1000);
             return "aaa";
