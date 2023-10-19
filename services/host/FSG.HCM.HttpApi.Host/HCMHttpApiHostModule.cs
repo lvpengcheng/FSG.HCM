@@ -1,4 +1,4 @@
-using FSG.HCM.FlowManagement;
+
 using FSG.HCM.Onboarding;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
@@ -17,9 +17,7 @@ namespace FSG.HCM
         typeof(HCMCapEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpCachingStackExchangeRedisModule),
-        typeof(AbpBackgroundJobsHangfireModule),
-                 typeof(OnboardingModule),
-        typeof(FlowManagementModule)
+        typeof(AbpBackgroundJobsHangfireModule)
     )]
     public partial class HCMHttpApiHostModule : AbpModule
     {
