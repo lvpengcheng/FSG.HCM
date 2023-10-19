@@ -66,7 +66,7 @@ namespace FSG.HCM.Onboarding
             //await CustomApi.SendMpNewsAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", newsResult.media_id, 10000, "");
             await CustomApi.SendTextAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "hello");
             await TemplateApi.SendTemplateMessageAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "UbZqcD8CG4krEHnZAcEx4jTJsMeECdqe3HsjiZks1aQ", "","",null,1000);
-            return "aaa111";
+            return "aaa1112";
         }
 
         public string TestFadada() {
