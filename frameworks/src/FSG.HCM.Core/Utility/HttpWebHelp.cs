@@ -38,7 +38,9 @@ namespace FDD.OpenAPI.Utility
             //HTTPS无视证书验证
             var callback = new RemoteCertificateValidationCallback((sender, certificate, chain, errors) => { return true; });
             ServicePointManager.ServerCertificateValidationCallback = callback;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
+            ServicePointManager.SecurityProtocol= SecurityProtocolType.Tls |
+                    SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls| SecurityProtocolType.Tls11|SecurityProtocolType.Tls12|SecurityProtocolType.Tls13 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
         }
 
         public static HttpWebRequest SetDefault(this HttpWebRequest req)

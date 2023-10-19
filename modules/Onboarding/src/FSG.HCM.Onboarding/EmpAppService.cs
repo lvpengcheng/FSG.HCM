@@ -1,7 +1,10 @@
 ﻿using Aspose.Cells;
+using FDD.OpenAPI;
+using FDD.OpenAPI.SDKModels.Accounts;
 using FSG.HCM.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using Senparc.NeuChar.Entities;
 using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.AdvancedAPIs.GroupMessage;
@@ -64,6 +67,31 @@ namespace FSG.HCM.Onboarding
             await CustomApi.SendTextAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "hello");
             await TemplateApi.SendTemplateMessageAsync("wx58c8a3f9e8bd0abb", "oF7rtwrZQ51FOVJfTkVVdBN3CITc", "UbZqcD8CG4krEHnZAcEx4jTJsMeECdqe3HsjiZks1aQ", "","",null,1000);
             return "aaa111";
+        }
+
+        public string TestFadada() {
+            var ServerUrl = "https://sandboxapi.fadada.com/api/v3";
+            var AppId = "FA67694018";
+            var AppKey = "UNPRNJ8M35RUBJCTVOTJSL2AXQRLGMZS";
+            //var client = new OpenClient(ServerUrl, AppId, AppKey);
+            var client = new EcologicalClient(ServerUrl, AppId, AppKey);
+
+            var result3 = client.Execute(new GetCompanyUnionIdUrlRequest()
+            {
+                clientId = "6666666666666",
+                company = new GetCompanyUnionIdUrlRequest.Company()
+                {
+                    companyName = "abccompany"
+                },
+                redirectUrl = "http://www.shouhu.com",
+                applicant = new GetCompanyUnionIdUrlRequest.Applicant()
+                {
+                    applicantType = "1",
+                    unionId = "28374"
+                }
+            });
+
+            return JsonConvert.SerializeObject(result3);
         }
 
         public string GetTenant()
