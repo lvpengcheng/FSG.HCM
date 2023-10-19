@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 
     <PropertyGroup>
@@ -48,7 +48,6 @@
     <ItemGroup>
         <ProjectReference Include="..\..\..\frameworks\src\FSG.HCM.CAP.EntityFrameworkCore\FSG.HCM.CAP.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\..\frameworks\src\FSG.HCM.CAP\FSG.HCM.CAP.csproj" />
-        <ProjectReference Include="..\..\..\modules\FlowManagement\src\FSG.HCM.FlowManagement\FSG.HCM.FlowManagement.csproj" />
         <ProjectReference Include="..\..\..\modules\Onboarding\src\FSG.HCM.Onboarding\FSG.HCM.Onboarding.csproj" />
         <ProjectReference Include="..\..\..\shared\FSG.HCM.Shared.Hosting.Microservices\FSG.HCM.Shared.Hosting.Microservices.csproj" />
         <ProjectReference Include="..\..\src\FSG.HCM.Application\FSG.HCM.Application.csproj" />
