@@ -12,7 +12,12 @@ import 'ant-design-vue/dist/reset.css'
 
 import "@/utils/default-passive-events"
 
-const app = createApp(App)
+import { GcSpreadSheets, GcWorksheet, GcColumn } from '@grapecity/spread-sheets-vue'
+let app = createApp(App)
+
+app.component('gc-spread-sheets', GcSpreadSheets);
+app.component('gc-worksheet', GcWorksheet);
+app.component('gc-column', GcColumn);
 app.use(Antd)
 app.use(router)
 app.use(store)
