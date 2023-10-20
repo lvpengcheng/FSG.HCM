@@ -3,6 +3,7 @@
   "version": "0.1.3",
   "private": true,
   "scripts": {
+    "nswag": "cd nswag &.\\refresh.bat",
     "dev": "cross-env vite --mode localhost",
     "debug-vite": "cross-env vite --mode localhost --debug",
     "build": "vite build",
