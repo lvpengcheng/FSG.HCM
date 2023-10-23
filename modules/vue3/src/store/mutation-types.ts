@@ -10,30 +10,33 @@ export const USER_INFO = 'USER_INFO'
 export const PERMISSION = 'PERMISSION'
 export const TOGGLE_DEVICE = 'TOGGLE_DEVICE'
 export const SET_SETTING_DRAWER = 'SET_SETTING_DRAWER'
-export const SET_SIDEBAR_TYPE ='SET_SIDEBAR_TYPE'
-export const TOGGLE_FIXED_SIDERBAR ='TOGGLE_FIXED_SIDERBAR'
-export const TOGGLE_FIXED_HEADER_HIDDEN ='TOGGLE_FIXED_HEADER_HIDDEN'
-export const TOGGLE_GRAY ='TOGGLE_GRAY'
-export const TOGGLE_THEME ='TOGGLE_THEME'
-export const TOGGLE_LAYOUT_MODE ='TOGGLE_LAYOUT_MODE'
-export const CLOSE_SIDEBAR ='CLOSE_SIDEBAR'
+export const SET_SIDEBAR_TYPE = 'SET_SIDEBAR_TYPE'
+export const TOGGLE_FIXED_SIDERBAR = 'TOGGLE_FIXED_SIDERBAR'
+export const TOGGLE_FIXED_HEADER_HIDDEN = 'TOGGLE_FIXED_HEADER_HIDDEN'
+export const TOGGLE_GRAY = 'TOGGLE_GRAY'
+export const TOGGLE_THEME = 'TOGGLE_THEME'
+export const TOGGLE_LAYOUT_MODE = 'TOGGLE_LAYOUT_MODE'
+export const CLOSE_SIDEBAR = 'CLOSE_SIDEBAR'
 export const SET_DARK_MODE = 'SET_DARK_MODE'
 export const SITE_SETTINGS = 'SITE_SETTINGS'
 export const MENU_NAV = 'MENU_NAV'
 export const SET_LOCK_SCREEN = 'SET_LOCK_SCREEN'
+//增加关于abp的一些参数
+export const ABP_TENANTID = 'ABP_TENANTID'
+export const ABP_LANGUE = 'ABP_LANGUE'
 
 export const DEVICE_TYPE = {
-  DESKTOP: 'desktop',
-  TABLET: 'tablet',
-  MOBILE: 'mobile'
+    DESKTOP: 'desktop',
+    TABLET: 'tablet',
+    MOBILE: 'mobile'
 }
 
 export const CONTENT_WIDTH_TYPE = {
-  Fluid: 'Fluid',
-  Fixed: 'Fixed'
+    Fluid: 'Fluid',
+    Fixed: 'Fixed'
 }
 
 export const NAV_THEME = {
-  LIGHT: 'light',
-  DARK: 'dark'
+    LIGHT: 'light',
+    DARK: 'dark'
 }
