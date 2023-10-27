@@ -31,6 +31,11 @@ namespace FSG.HCM.Onboarding
             _currentUser = currentUser;
         }
 
+        public string test222()
+        {
+            return "这是一个测试";
+        }
+
 
         public async Task<string>  Test1111()
         {
