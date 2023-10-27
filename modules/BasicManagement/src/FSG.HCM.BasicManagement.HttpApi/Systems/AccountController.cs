@@ -15,5 +15,12 @@ namespace FSG.HCM.BasicManagement.Systems
         {
             return _accountAppService.LoginAsync(input);
         }
+
+
+        [SwaggerOperation(summary: "登录", Tags = new[] { "Account" })]
+        public string Test()
+        {
+            return "这是一个测试";
+        }
     }
 }
