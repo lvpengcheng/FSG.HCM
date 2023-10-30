@@ -17,7 +17,8 @@ namespace FSG.HCM
         typeof(HCMCapEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpCachingStackExchangeRedisModule),
-        typeof(AbpBackgroundJobsHangfireModule)
+        typeof(AbpBackgroundJobsHangfireModule),
+        typeof(OnboardingModule)
     )]
     public partial class HCMHttpApiHostModule : AbpModule
     {
